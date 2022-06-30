@@ -17,6 +17,10 @@ def input_user_name(file_contents):
     Takes username as input
     """
     user_name = input("Enter username: ")
+    if user_name in file_contents:
+        print(file_contents.readline())
+    else:
+        print("Username not found.")
 
 
 def correct_or_incorrect():
@@ -25,6 +29,13 @@ def correct_or_incorrect():
     Prompt to ask if details are correct or not
     @return correct or incorrect
     """
+    answer = input("Are the details correct? Y/N: ").lower()
+    if answer == "y":
+        return "correct"
+    elif answer == "n":
+        return "incorrect"
+    else:
+        print("Incorrect submission given")
 
 
 def correct_details():
