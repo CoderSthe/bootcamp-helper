@@ -57,7 +57,7 @@ def correct_details():
         experience = "No Prior Experience"
 
     with open('bootcampers.txt', 'a') as f:
-        pass
+        f.write(f"{username} - {date} - {location} - {experience}")
 
 def get_file_contents():
 
