@@ -47,11 +47,22 @@ def correct_details():
     * Location
     * Experience
     """
-    
+    username = input("Enter username: ")
+    date = input("Enter cohort year: ")
+    location = input("Enter campus name: ")
+    prior_experience = input("Do you have prior coding experience? Y/N").lower()
+    if prior_experience == "y":
+        experience = "Prior Experience"
+    elif prior_experience == "n":
+        experience = "No Prior Experience"
+
+    with open('bootcampers.txt', 'a') as f:
+        pass
 
 def get_file_contents():
 
     """Return desired text file"""
+    
 
 
 def find_username(file_name):
